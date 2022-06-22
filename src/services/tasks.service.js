@@ -44,8 +44,32 @@ const getTaskByIdService = (id) => {
   return tasks.find((task) => task.id == id);
 };
 
+const addTaskService = (newTask) => {
+  const newId = tasks[tasks.length - 1].id + 1; // ❗❗❗ line incorrect (?) on material // const newId = paletas.length + 1;
+  newTask.id = newId;
+  tasks.push(newTask);
+  return newTask;
+};
+
+const updateTaskService = (id, updatedTask) => {
+  updatedTask.id = id;
+  const taskIndex = tasks.findIndex((task) => task.id == id);
+  tasks[taskIndex] = updatedTask;
+  return updatedTask;
+};
+
+const deleteTaskService = (id) => {
+  const taskIndex = tasks.findIndex((task) => task.id == id);
+  const deletedTask = tasks[taskIndex];
+  tasks.splice(taskIndex, 1);
+  return deletedTask;
+};
+
 module.exports = {
   getAllTasksService,
   getTasklistService,
   getTaskByIdService,
+  addTaskService,
+  updateTaskService,
+  deleteTaskService,
 };

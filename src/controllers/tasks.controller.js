@@ -19,8 +19,30 @@ const getTaskByIdController = (req, res) => {
   res.send(chosenTask);
 };
 
+const addTaskController = (req, res) => {
+  const taskBody = req.body;
+  const newTask = tasksService.addTaskService(taskBody);
+  res.send(newTask);
+};
+
+const updateTaskController = (req, res) => {
+  const idParam = Number(req.params.id);
+  const taskBody = req.body;
+  const updatedTask = tasksService.updateTaskService(idParam, taskBody);
+  res.send(updatedTask);
+};
+
+const deleteTaskController = (req, res) => {
+  const idParam = req.params.id;
+  const deletedTask = tasksService.deleteTaskService(idParam);
+  res.send(deletedTask);
+};
+
 module.exports = {
   getAllTasksController,
   getTasklistController,
   getTaskByIdController,
+  addTaskController,
+  updateTaskController,
+  deleteTaskController,
 };
