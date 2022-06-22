@@ -1,0 +1,27 @@
+{
+  "name": "blue_mod03_proj01_to-do_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miaslls/BLUE_MOD03_PROJ01_to-do_list.git"
+  },
+  "author": "miaslls",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miaslls/BLUE_MOD03_PROJ01_to-do_list/issues"
+  },
+  "homepage": "https://github.com/miaslls/BLUE_MOD03_PROJ01_to-do_list#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
