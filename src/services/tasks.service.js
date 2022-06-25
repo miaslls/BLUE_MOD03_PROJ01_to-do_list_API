@@ -52,12 +52,18 @@ const addTaskService = (newTask) => {
 const updateTaskService = (id, updatedTask) => {
   updatedTask.id = id;
   const taskIndex = tasks.findIndex((task) => task.id === id);
+  if (taskIndex === -1) {
+    return null;
+  }
   tasks[taskIndex] = updatedTask;
   return updatedTask;
 };
 
 const deleteTaskService = (id) => {
   const taskIndex = tasks.findIndex((task) => task.id === id);
+  if (taskIndex === -1) {
+    return null;
+  }
   const deletedTask = tasks[taskIndex];
   tasks.splice(taskIndex, 1);
   return deletedTask;
