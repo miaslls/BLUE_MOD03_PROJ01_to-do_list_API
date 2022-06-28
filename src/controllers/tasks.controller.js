@@ -10,7 +10,7 @@ const getAllTasksController = (req, res) => {
 const getTasklistController = (req, res) => {
   const tasklistParam = req.params.tasklist;
   const chosenTasklist = tasksService.getTasklistService(tasklistParam);
-  if (chosenTasklist[1] === undefined) {
+  if (chosenTasklist[0] === undefined) {
     res.send({ message: 'tasklist empty' });
   } else {
     res.send(chosenTasklist);
