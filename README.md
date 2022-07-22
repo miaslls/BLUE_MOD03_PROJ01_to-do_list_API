@@ -1,7 +1,24 @@
-# BLUE_MOD03_PROJ01_to-do_list
+# TODO list API
 
-- NOTE: extension CodeMetrics
-- NOTE: Draw.io Integration
+## dependencies
 
-- TODO: send status + message + object/list ✔
-- TODO: import - export in place of REQUIRE ✔ (PROJ02)
+- cors: 2.8.5
+- express: 4.18.1
+
+---
+
+## install
+
+```
+npm i
+```
+
+---
+
+## run
+
+```
+npm run start
+```
+
+
